@@ -43,7 +43,7 @@ def predict():
             path=pd.concat([data, path], axis=1)
             path.to_html("Table.htm")
             html_file =path.to_html()
-            return html_file
+            return Response(html_file)
 
     except ValueError:
         return Response("Error Occurred! %s" %ValueError)
