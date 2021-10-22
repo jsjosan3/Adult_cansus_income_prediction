@@ -86,7 +86,7 @@ def train_predict():
         X_train, X_test, y_train, y_test = split_data.split_data(X,y)
         
         modelfinder=ModelFinder()
-        modelfinder.get_best_model(X_train, X_test, y_train, y_test)
+        return modelfinder.get_best_model(X_train, X_test, y_train, y_test)
 
 
     except ValueError:
