@@ -23,11 +23,11 @@ class prediction:
                 else:
                     predictions.append('>50K')
 
-            final = pd.DataFrame(list(predictions), columns=['Predictions'])
+            self.final = pd.DataFrame(list(predictions), columns=['Predictions'])
             #path = "Prediction_Output_File/Predictions.csv"
             #final.to_csv(path, header=True,mode='a+')  # appends result to prediction file
             #self.log_writer.log(self.file_read, 'End of Prediction')
-            return final
+            return self.final
         except Exception as ex:
             self.log_writer.log(self.file_read, 'Error occurred while running the prediction!! Error:: %s' % ex)
 
