@@ -41,7 +41,7 @@ def predict():
             path=predict.predict_results(df)
             #path=predict.predict_results(df)
             path=pd.concat([data, path], axis=1)
-            path.to_html("Table.htm")
+            #path.to_html("Table.htm")
             html_file =path.to_html()
             return Response(html_file)
 
