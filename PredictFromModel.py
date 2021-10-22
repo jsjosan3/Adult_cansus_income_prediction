@@ -23,7 +23,7 @@ class prediction:
                 else:
                     predictions.append('>50K')
 
-            final = pd.DataFrame(list(zip(predictions)), columns=['Predictions'])
+            final = pd.DataFrame(list(predictions), columns=['Predictions'])
             #path = "Prediction_Output_File/Predictions.csv"
             #final.to_csv(path, header=True,mode='a+')  # appends result to prediction file
             #self.log_writer.log(self.file_read, 'End of Prediction')
